@@ -11,7 +11,7 @@ const app = express();
 const PORT = 3000;
 
 // TODO 4: Import and Apply CORS middleware
-app.use(cors);
+app.use(cors());
 
 // TODO 5: Import and apply Morgan middleware
 app.use(morgan("dev"));
@@ -28,3 +28,6 @@ app.get("/api/quote", (req, res) => {
    });
 
 // TODO 7: Start server using app.listen
+app.listen(PORT, () => {
+     console.log(`Server is running on http://localhost:${PORT}`);
+   });

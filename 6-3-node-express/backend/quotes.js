@@ -12,6 +12,7 @@ const quotes = [
 //Hint: export function getRandomQuote(){}
 
 export function getRandomQuote() {
-  const index = getRandomInt(quotes.length);
+  const maxIndex=quotes.length;
+  const index = getRandomInt(maxIndex);
   return quotes[index];
 }
